@@ -10,21 +10,21 @@ Fetch an API key (you will need this to run the LLM): https://console.groq.com/k
 
 ## How to Import and run this agent
 
-**1. Download the Flow File:
+### 1. Download the Flow File:
 To run this project, you need to download the **meorserv14.json** file from this repository which is the built Langflow project
 
-**2. Import into Langflow:
+### 2. Import into Langflow:
 Open your local Langflow dashboard in terminal: uv run langflow run
 Click **Upload a flow** located next to the projects menu
 Select the meorserv14.json downloaded from earlier
 
-**3. Configure API Keys:
+### 3. Configure API Keys:
 Once the flow loads on your canvas, you will see a few components with red warnings indicating missing credentials
 Click the LLM component 
 Paste in your API key
 Select the model "Llama-4-scout"
 
-**4. Time to test!
+### 4. Time to test!
 Hit the **playground icon** in the top right
 Type in a betting line from your prediction market of choice (Kalshi, Polymarket)
 Press **run flow**
