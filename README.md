@@ -14,7 +14,7 @@ Fetch an API key (you will need this to run the LLM): https://console.groq.com/k
 To run this project, you need to download the **meorserv14.json** file from this repository which is the built Langflow project
 
 ### 2. Import into Langflow:
-Open your local Langflow dashboard in terminal: uv run langflow run\
+Open your local Langflow dashboard in terminal: ```uv run langflow run```\
 Click **Upload a flow** located next to the projects menu\
 Select the meorserv14.json downloaded from earlier
 
