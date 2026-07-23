@@ -18,6 +18,7 @@ Open your local Langflow dashboard in terminal:
 ```shell
 uv run langflow run
 ```
+Open Langflow\
 Click **Upload a flow** located next to the projects menu\
 Select the meorserv14.json downloaded from earlier
 
