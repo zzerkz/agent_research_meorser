@@ -1,22 +1,27 @@
 ## Brief Overview
 
 Meorser (Meme or Serious) is a sorting agent that takes various betting lines on prediction markets such as Kalshi and Polymarket and labels them as one of three catergories: Meme, Serious, and Grey (Grey is for lines that don't fit into the binary). The point of this is to allow further research on the correlation of absurd (meme) lines and betting traders. 
-## Quick Start
+## How to run
 
 ### 1. Clone the repo
 ```shell
 git clone https://github.com/zzerkz/agent_research_meorser.git
    cd agent_research_meorser
 ```
-### 2. Install requirements.txt
+### 2. Create and activate a virtual environment
+```shell
+   python3 -m venv venv
+   source venv/bin/activate
+```
+### 3. Install requirements.txt
 ```shell
 pip3 install -r requirements.txt
 ```
-### 3. Fetch Groq API Key (https://console.groq.com/keys)
+### 4. Fetch Groq API Key 
 ```shell
-export GROQ_API_KEY="your_key_here"
+export GROQ_API_KEY="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"
 ```
-### 4. Run it:
+### 5. Run it:
 ```shell
 python3 meorser.py "What will Shaquille O'Neal say during Inside the NBA?"
 ```
