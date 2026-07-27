@@ -1,8 +1,28 @@
 ## Brief Overview
 
-Meorser (Meme or Serious) is a sorting agent that takes various betting lines on prediction markets such as Kalshi and Polymarket and labels them as one of three catergories: Meme, Serious, and Grey (Grey is for lines that don't fit into the binary). The point of this is to allow further research on the correlation of absurd (meme) lines and betting traders. You are also able to upload large date files in .csv and in return receive an easy to digest classification.   
+Meorser (Meme or Serious) is a sorting agent that takes various betting lines on prediction markets such as Kalshi and Polymarket and labels them as one of three catergories: Meme, Serious, and Grey (Grey is for lines that don't fit into the binary). The point of this is to allow further research on the correlation of absurd (meme) lines and betting traders. 
+## Quick Start
 
-## Prerequisites
+### 1. Clone the repo
+```shell
+git clone https://github.com/zzerkz/agent_research_meorser.git
+   cd agent_research_meorser
+```
+### 2. Install requirements.txt
+```shell
+pip3 install -r requirements.txt
+```
+### 3. Fetch Groq API Key (https://console.groq.com/keys)
+```shell
+export GROQ_API_KEY="your_key_here"
+```
+### 4. Run it:
+```shell
+python3 meorser.py "What will Shaquille O'Neal say during Inside the NBA?"
+```
+In the "" paste the betting line you want classified from either Kalshi or Polymarket (or make up a market, have fun with it).
+
+## Prerequisites (If you wish to run Langflow via the web UI)
 
 Install Langflow (the interface) https://github.com/langflow-ai/langflow?tab=readme-ov-file
 
