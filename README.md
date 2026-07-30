@@ -19,7 +19,7 @@ pip3 install -r requirements.txt
 ```
 ### 4. Fetch Groq API Key 
 ```shell
-export GROQ_API_KEY="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"
+export GROQ_API_KEY="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"
 ```
 ### 5. Run it:
 ```shell
