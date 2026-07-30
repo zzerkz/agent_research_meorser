@@ -1,0 +1,158 @@
+\documentclass{article}
+
+
+
+\usepackage{arxiv}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}		% Can be removed after putting your text content
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{doi}
+\usepackage{graphicx}
+\usepackage{parskip}
+
+
+
+
+\title{Predicting the Influence of Internet Culture on Kalshi Spending: An LLM Agent Approach to What will Shaquille O'Neal say during Inside the NBA?}
+
+%\date{September 9, 1985}	% Here you can change the date presented in the paper title
+%\date{} 					% Or removing it
+
+\author{
+    Bowie Vaughan \\
+    \texttt{bowievaughan@gmail.com} \\
+    \And
+    Aaron Grinberg \\
+    \texttt{aarongrinberg@gmail.com} \\
+}
+
+% Uncomment to remove the date
+%\date{}
+
+% Uncomment to override  the `A preprint' in the header
+\renewcommand{\headeright}{}
+\renewcommand{\undertitle}{}
+\renewcommand{\shorttitle}{\textit{arXiv} Template}
+
+\date{\textit{Institute for Computing in Research} \\[4mm] \today}
+
+%%% Add PDF metadata to help others organize their library
+%%% Once the PDF is generated, you can check the metadata with
+%%% $ pdfinfo template.pdf
+\hypersetup{
+pdftitle={A template for the arxiv style},
+pdfsubject={q-bio.NC, q-bio.QM},
+pdfauthor={David S.~Hippocampus, Elias D.~Striatum},
+pdfkeywords={First keyword, Second keyword, More},
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+	Prediction markets increasingly list betting lines influenced by the internet and meme culture alongside traditional politics, financial, and sports markets. This research examines whether a markets genre of betting, influences the trading volume it attracts on Kalshi. Using an LLM built from the open source tool Langflow, and powered by the open source AI, "LLama," 1433 betting lines were categorized as "Meme," "Serious," and "Grey." These categories were determined by human feedback, theory, and real world events all through the LLM. These categories were also further labeled "sports" and "non-sports." Ordinary least squares regression was used to model trading volume as a function of category, bet type, and market duration (days). Relative to meme labeled markets, serious markets were associated with significantly higher volume (p < .001 for Models 2 and 3). Sports bets were related to less volume compared to non sports bets across the models, and longer market duration was associated with higher volume. These preliminary results indicate that markets tied to consequential real world events attract more capital than meme driven markets. 
+\end{abstract}
+%%% Maybe add an asterik next to Langflow to tell the audience the name of the LLM -meorser-
+
+% keywords can be removed
+\keywords{First keyword \and Second keyword \and More}
+
+
+\section{Introduction}
+Prediction Markets grow year after year as the varying markets to bet on expand. One of the main selling points, is the ability to bet on absurdity, memes, and implausibility. Prediction markets include bets on predicting what Trump will say on his next speech, if GTA VI will ever release, and if we can expect a thunderstorm tomorrow. Little is known whether internet culture markets command real trading volume comparable to more conventional, traditional markets, or whether their popularity is mostly noise with minimal capital behind it. 
+
+This paper sets out to answer that question using an original data set of 1,400 Kalshi betting lines, classified by an LLM and sorted into three categories "Meme," "Serious," and "Grey." Each category was further evaluated with the control variables of sports/non-sports markets and market duration.
+\section{Methods}
+A brief overview of the methods used throughout the research conducted include the process of building an LLM to process betting lines, and output into the three categories of "Meme," "Serious," and "Grey." The data set I will be using is from huggingface by the author Deniz Zorlu and is an open source publicly available set including 1433 rows of betting lines, dates, tickers, and more.
+%%% need to add a footnote here for Deniz
+\label{sec:headings}
+
+\lipsum[4] See Section \ref{sec:headings}.
+
+\subsection{Creating the LLM agent}
+To start the data collection process, an LLM agent was necessary in sorting the data in an efficient manner. Using the app Langflow, which is a free agent building service, and an API key* for the ai model llama-3.1-8b-instant, the first variation of meorser (the category sorting agent, shortened for "MemeorSerious") was built. The first variation was unique in the way that it broke down each betting line you fed it and provided an in depth reason as to why said betting fell into each category. Through vibe based prompting and constant adjustments to those prompts, eventually a consistent working agent was formed. After accurately representing what each category the various markets fell into, the next variation was created. The second variation of meorser, reads large .csv files and outputs them into a neatly organized data table that additionally includes the category for each betting line, and also the classification of sports and non-sports.  
+ %%%footnote for groqcloud for api key
+\subsection{Data Collection}
+For data collection, the dataset was ran through meorser and the output now contained the new columns of category and sports/non-sports. The results are shown in the two histograms below. The first histogram represents the \% of each category in the dataset and the second histogram represents the average volume per each category. 
+
+
+\subsubsection{Headings: third level}
+\lipsum[6]
+
+\paragraph{Paragraph}
+\lipsum[7]
+
+
+
+\section{Preliminary Results with OLS Regression}
+To examine whether a market's category influences the trading volume it receives on Kalshi, three sequential OLS regression models were built using the 1,433 betting lines. Trading volume was used as the dependent variable across all models, with "meme" serving as the reference category. Model 1 included only the category classifications (Grey and Serious, relative to Meme). Model 2 introduced the sports betting classification. Model 3 introduced market duration (in days), to control for markets accumulating volume over longer amounts of times, regardless of category.
+\label{sec:others}
+
+\subsection{Models}
+Model 1 tested the amount of volume in Grey and Serious markets and whether that differed from Meme markets. The results were statistical insignificant (Grey: B = -1,259, SE = 12,600; Serious: B = 4,492, SE = 7,649). Meaning this model was not sufficient in finding meaningful volume distinctions.  
+Model 2 introduced the sports betting control, and revealed two statistically significant relationships. Serious markets were associated with substantially higher trading volume then Meme markets (B = 4,492, p<.001), suggesting that Serious markets attract significantly more capital then Meme-driven markets. Conversely, sports bet were associated with greatly reduced predicted volume compared to non-sports markets (B = -52,210, SE = 5,458). Grey markets remain statistically insignificant. 
+Model 3 introduced market duration (in days), which displays three statistically significant results. Market duration has a positive correlation to predicted volume, regardless of category, by an estimated increase of 607 units of volume per day. When controlling for market duration, the predicted volume of sports bets significantly increases (B = -24,890, SE = 5,750). The volume advantages of Serious markets compared to Meme markets is not defined by market duration (B = 44,160, SE = 8,423) unlike sports bets.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8 \linewidth]{actualdatatable1.png}
+    \caption{Regression results for Model 1, Model 2, and Model 3. Coefficients represent measures of volume.}
+    \label{fig:placeholder}
+\end{figure}
+
+
+\section{Conclusion}
+
+\subsection{Limitations}
+The limitations throughout this research included the dataset, being from a third party source not directly from the Kalshi API. Also, more data and datasets would have been ideal to identify more patterns and receive more accurate results. However, the most relevant limitation is subjectivity. The LLM created for the purpose of this paper is not a perfect machine, some if not many of the categories it labeled as Serious, Meme, and Grey are subjective and could be identified as a different category by another source. The Grey category was implemented in an attempt to subside the subjectivity.   
+\subsection{Discussion}
+The media tends to lean one way when it comes to trends, specifically internet trends. Because of Kalshi being accessible to people as early as 18 year of age, and the constant attempt of older generation figures and politicians trying to win over the younger audience (Making jokes, buying into pop culture), the amount of volume in Meme categories did not comprehensively reflect that in this research. However, this research did show that sports bets tend to be less popular on Prediction Markets, implying that the predicted volume is spread out into other categories-. 
+
+\section{Acknowledgments}
+
+I would like to thank my mentor, Aaron Grinberg, who guided and supported me throughout this
+project. I would also like to thank the Institute for Computing in Research for providing this opportunity. 
+
+
+\bibliographystyle{unsrtnat}
+\bibliography{references}  %%% Uncomment this line and comment out the ``thebibliography'' section below to use the external .bib file (using bibtex) .
+
+
+%%% Uncomment this section and comment out the \bibliography{references} line above to use inline references.
+% \begin{thebibliography}{1}
+
+% 	\bibitem{kour2014real}
+% 	George Kour and Raid Saabne.
+% 	\newblock Real-time segmentation of on-line handwritten arabic script.
+% 	\newblock In {\em Frontiers in Handwriting Recognition (ICFHR), 2014 14th
+% 			International Conference on}, pages 417--422. IEEE, 2014.
+
+% 	\bibitem{kour2014fast}
+% 	George Kour and Raid Saabne.
+% 	\newblock Fast classification of handwritten on-line arabic characters.
+% 	\newblock In {\em Soft Computing and Pattern Recognition (SoCPaR), 2014 6th
+% 			International Conference of}, pages 312--318. IEEE, 2014.
+
+% 	\bibitem{hadash2018estimate}
+% 	Guy Hadash, Einat Kermany, Boaz Carmeli, Ofer Lavi, George Kour, and Alon
+% 	Jacovi.
+% 	\newblock Estimate and replace: A novel approach to integrating deep neural
+% 	networks with existing applications.
+% 	\newblock {\em arXiv preprint arXiv:1804.09028}, 2018.
+
+% \end{thebibliography}
+
+See Figure \ref{fig:fig1}. Here is how you add footnotes. \footnote{Sample of the first footnote.}
+\lipsum[11]
+
+
+
+\end{document}
