@@ -60,4 +60,10 @@ Press **run flow**\
 You will be presented with a category (Meme, Serious, Grey) and a reason as to why this category was chosen\
 Enjoy!
 
+## Reproducing the Paper files and slides (does not include images and models)
+
+For the paper open the **BowieVaughan_PredictingtheInfluenceofInternetCultureonKalshiSpending.tex** file in a latex editor.
+
+For the slides open the **BowieVaughan_PredictingtheInfluenceofInternetCultureonKalshiSpending_slides.zip** for access to the .odp and latex source files.
+
 
