@@ -62,8 +62,10 @@ Enjoy!
 
 ## Reproducing the Paper files and slides (does not include images and models)
 
-For the paper open the **BowieVaughan_PredictingtheInfluenceofInternetCultureonKalshiSpending.tex** file in a latex editor.
 
-For the slides open the **BowieVaughan_PredictingtheInfluenceofInternetCultureonKalshiSpending_slides.zip** for access to the .odp and latex source files.
+This repository contains LaTeX source, figures, and slide deck for this research project.
+To edit or recompile, open the `BowieVaughan_PredictingtheInfluenceofInternetCultureonKalshiSpending_report.tex` file in [Overleaf](https://www.overleaf.com).
+
+For the slides open the 'BowieVaughan_PredictingtheInfluenceofInternetCultureonKalshiSpending_slides.zip' for access to the .odp and latex source files.
 
 
